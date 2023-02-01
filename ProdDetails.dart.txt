@@ -1,0 +1,106 @@
+import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+import '/prodDetails.dart';
+
+void main() => runApp(MaterialApp(
+      home: prodDetails(),
+    ));
+
+class prodDetails extends StatelessWidget {
+  static const routeName = '/prodDetails';
+  const prodDetails({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Color(0xffcbc8c8),
+      appBar: AppBar(
+        title: Text(
+          'Details Screen',
+          style: TextStyle(
+            color: Colors.black,
+            fontWeight: FontWeight.bold,
+            fontSize: 28,
+          ),
+        ),
+        centerTitle: true,
+        backgroundColor: Colors.white,
+      ),
+      body: Column(
+        children: [
+          Image.asset('assets/adidasshoes1.PNG',
+              width: double.infinity, height: 250, fit: BoxFit.cover),
+          Expanded(
+            child: Container(
+              width: double.infinity,
+              decoration: BoxDecoration(
+                color: Colors.white,
+              ),
+              child: Column(
+                children: [
+                  Row(
+                    children: [
+                      Expanded(
+                        child: Padding(
+                          padding: const EdgeInsets.fromLTRB(18, 15, 0, 0),
+                          child: Text(
+                            'Adidas shoes',
+                            style: TextStyle(
+                                fontSize: 28.0, fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(height: 4.0),
+                  Row(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(18, 0, 0, 0),
+                        child: Text(
+                          '\$1200',
+                          style: TextStyle(
+                              fontSize: 28.0, fontWeight: FontWeight.bold),
+                        ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(height: 14.0),
+                  Row(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(18, 0, 0, 0),
+                        child: Text(
+                          'More Details',
+                          style: TextStyle(
+                            fontSize: 15.0,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(height: 10.0),
+                  Row(
+                    children: [
+                      Padding(padding: const EdgeInsets.fromLTRB(30, 0, 30, 0)),
+                      Expanded(
+                        child: Text(
+                          'LIGHTWEIGHT RUNNING SHOES WITH ADDED BREATHABILITY. Make the most out of your runs. No matter how far you go, these adidas shoes cushion every take-off and landing to make each step feel like a good one. Another block. Another lap. Another mile. Get after it.',
+                          style: TextStyle(
+                              fontSize: 12.0,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.grey),
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}

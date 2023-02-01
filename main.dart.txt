@@ -1,0 +1,129 @@
+import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+import '/prodDetails.dart';
+
+void main() => runApp(MaterialApp(
+      home: Home(),
+    ));
+
+class Home extends StatelessWidget {
+  const Home({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          'SHOPPERS',
+          style: TextStyle(
+            color: Colors.black,
+            fontWeight: FontWeight.bold,
+            fontSize: 28,
+          ),
+        ),
+        centerTitle: true,
+        backgroundColor: Color(0xffd7a9a9),
+      ),
+      body: Container(
+        padding: EdgeInsets.fromLTRB(20, 30, 20, 30),
+        child: Wrap(
+          alignment: WrapAlignment.spaceAround,
+          spacing: 25,
+          runSpacing: 25,
+          children: <Widget>[
+            Column(
+              children: [
+                Image.asset('assets/adidasshoes1.PNG',
+                    height: 120.0, width: 120.0),
+                const Text(
+                  'Adidas Shoes',
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+                const Text(
+                  '190000',
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+              ],
+            ),
+            const SizedBox(height: 35),
+            Column(
+              children: [
+                Image.asset('assets/adidasshoes2.PNG',
+                    height: 120.0, width: 120.0),
+                const Text(
+                  'Adidas Shoes',
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+                const Text(
+                  '190000',
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+              ],
+            ),
+            const SizedBox(height: 35),
+            Column(
+              children: [
+                Image.asset('assets/adidasshoes3.PNG',
+                    height: 120.0, width: 120.0),
+                const Text(
+                  'Adidas Shoes',
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+                const Text(
+                  '72000',
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+              ],
+            ),
+            const SizedBox(height: 35),
+            Column(
+              children: [
+                Image.asset('assets/adidasshoes4.PNG',
+                    height: 120.0, width: 120.0),
+                const Text(
+                  'Adidas Shoes',
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+                const Text(
+                  '4500',
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+              ],
+            ),
+            const SizedBox(height: 35),
+            Column(
+              children: [
+                Image.asset('assets/adidassmartwatch1.PNG',
+                    height: 110.0, width: 110.0),
+                const Text(
+                  'Adidas Smart Watch',
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+                const Text(
+                  '9999',
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+              ],
+            ),
+            const SizedBox(height: 20),
+            Column(
+              children: [
+                Image.asset('assets/adidassmartwatch2.PNG',
+                    height: 110.0, width: 110.0),
+                const Text(
+                  'Adidas Smart Watch',
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+                const Text(
+                  '12999',
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+              ],
+            ),
+            const SizedBox(height: 20)
+          ],
+        ),
+      ),
+    );
+  }
+}
